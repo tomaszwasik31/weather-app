@@ -138,6 +138,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: default;
 }
 
 :root {
@@ -165,8 +166,22 @@ body {
   font-size: 2rem;
   font-weight: bold;
 }
-#city-input,
-#aqi {
+#search-wrapper{
+  display: flex;
+  padding: 1rem;
+
+}
+#searchBtn{
+  background-color: transparent;
+  box-shadow: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+
+#input,
+#aqi
+ {
   background-color: var(--yellow);
   box-shadow: 0;
   border: 0;
@@ -197,7 +212,7 @@ body {
   font-size: 2rem;
   font-weight: bold;
 }
-#next-days{
+#next-days {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -230,3 +245,9 @@ myIcon {
 .snow {
   content: url(../img/snow.svg);
 }
+
+.search {
+  content: url(../img/search.svg);
+ 
+}
+
