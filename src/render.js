@@ -1,6 +1,4 @@
 const render = (cityData, cityAQI) => {
-
-
   const addCdeg = (parent) => {
     const cDeg = document.createElement("sup");
     cDeg.innerText = "°C";
@@ -9,11 +7,9 @@ const render = (cityData, cityAQI) => {
   const ul = document.querySelector("#next-hours");
 
   const renderLi = (e) => {
-    
     const li = document.createElement("li");
     li.classList = "preview";
     ul.appendChild(li);
-    console.log(e);
 
     const myIcon = document.createElement("myicon");
     myIcon.classList = e.weather[0].main.toLowerCase();
@@ -47,9 +43,8 @@ const render = (cityData, cityAQI) => {
     aqi.textContent = "AQI " + cityAQI.list[0].main.aqi;
   };
   const renderHoursData = () => {
-
     //clean first
-    ul.innerHTML='';
+    ul.innerHTML = "";
     cityData.list.slice(1).forEach((e) => {
       renderLi(e);
     });
