@@ -8,7 +8,7 @@ const getData = async (input) => {
 
   const getCoord = async () => {
     const response = await fetch(
-      `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=241019ef2c8c83b71acba7e390ce2fac`,
+      `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=241019ef2c8c83b71acba7e390ce2fac`,
       { mode: "cors" }
     );
     const data = await response.json();
@@ -18,7 +18,7 @@ const getData = async (input) => {
 
   const getCityData = async () => {
     const response = await fetch(
-      `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&cnt=4&appid=241019ef2c8c83b71acba7e390ce2fac&units=metric`,
+      `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&cnt=4&appid=241019ef2c8c83b71acba7e390ce2fac&units=metric`,
       { mode: "cors" }
     );
     cityData = await response.json();
@@ -26,7 +26,7 @@ const getData = async (input) => {
 
   const getCityAQI = async () => {
     const response = await fetch(
-      `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=241019ef2c8c83b71acba7e390ce2fac`,
+      `https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=241019ef2c8c83b71acba7e390ce2fac`,
       { mode: "cors" }
     );
     cityAQI = await response.json();
