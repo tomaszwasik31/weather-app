@@ -237,30 +237,30 @@ myIcon {
   text-transform: capitalize;
 }
 .thunderstorm {
-  content: url(../img/thunderstorm.svg);
+  content: url(/img/thunderstorm.svg);
 }
 .clear {
-  content: url(../img/clear.svg);
+  content: url(/img/clear.svg);
 }
 
 .clouds {
-  content: url(../img/clouds.svg);
+  content: url(/img/clouds.svg);
 }
 .rain {
-  content: url(../img/rain.svg);
+  content: url(/img/rain.svg);
 }
 
 .snow {
-  content: url(../img/snow.svg);
+  content: url(/img/snow.svg);
 }
 
 .search {
-  content: url(../img/search.svg);
+  content: url(/img/search.svg);
 }
 
-.loading{
+.loading {
   position: fixed;
-  
+
   z-index: 9999;
   display: flex;
   flex-direction: column;
@@ -268,12 +268,12 @@ myIcon {
   justify-content: center;
 }
 
-#loading-text{
+#loading-text {
   position: absolute;
   font-size: 2rem;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 
@@ -281,11 +281,10 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  
+
   background-color: black;
   display: flex;
   gap: 1rem;
   align-items: center;
   min-height: 3rem;
-  
 }
