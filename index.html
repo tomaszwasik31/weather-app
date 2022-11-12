@@ -9,39 +9,47 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="app-wrapper">
+    <div class="loading">
+        <p id="loading-text">Loading...</p>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_lysgv1q4.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+    </div>
+    <div class="app-wrapper hidden">
         <div id="top-section">
+         
             <img id="pin" src="../img/pin.svg"></img>
-            <p id="city">London</p>
-            <div id="search-wrapper">
-                <input type="text" id="input" placeholder="Type a city name here ">
-                <button id="searchBtn">
-                    <myIcon class="search" src="../img/search.svg"><myIcon>
-                </button>
-            </div>
+            <p id="city"></p>
+            <p id="currentTime"></p>
+          
           
         </div>
         <div id="mid-section">
-            <p id="temperature">27<sup>°C</sup></p>
-            <p id="description">Cloudy</p>
-            <p id="aqi"> AQI 14</p>
+            <p id="currentTemp"></p>
+            <div id="currentCondition-wrapper">
+                <myIcon id= "currentCondition" class= ""></myIcon>
+                <p id="currentDesc"></p>
+            </div>
+           
+            <p id="aqi"></p>
         </div>
         <div id="bottom-section">
-            <p class="info">Today</p>
-            <ul id="next-days">
-                <li class="preview" id="morning">
-                    <myIcon class="condition thunderstorm"></myIcon> 08:00 Thunderstorm <span class='temp'>29°<sup>c</sup>/25°<sup>c</sup></span>
-                </li>
-                <li class="preview" id="morning">
-                    <myIcon class="condition snow"></myIcon>16:00  Thunderstorm <span class='temp'>29°<sup>c</sup>/25°<sup>c</sup></span>
-                </li>
-                <li class="preview" id="morning">
-                    <myIcon class="condition clear"></myIcon>20:00  Thunderstorm <span class='temp'>29°<sup>c</sup>/25°<sup>c</sup></span>
-                </li>
+            <p class="info">Later</p>
+            <ul id="next-hours">
+              
             </ul>
-        
+        </div>
+        <div id="search-wrapper">
+            <input type="text" id="input" placeholder="Type a city name here ">
+            <button id="searchBtn">
+                <myIcon class="search" src="../img/search.svg"><myIcon>
+            </button>
         </div>
     </div>
-    
+    <footer>
+        <p>Coded by Tomasz Wasik</p>
+        <p>Inspirations/sources:</p>
+        <a href="https://www.figma.com/community/file/1152973690936128467">Design</a>
+        <a href="https://lottiefiles.com/97934-loading-animation">Animation</a>
+    </footer>
 </body>
 </html>
