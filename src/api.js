@@ -1,5 +1,6 @@
 let cityData;
 let cityAQI;
+
 const getData = async (input) => {
   let city = input;
   let lat;
@@ -13,7 +14,6 @@ const getData = async (input) => {
     const data = await response.json();
     lat = data[0].lat;
     lon = data[0].lon;
-    return { lat, lon };
   };
 
   const getCityData = async () => {
@@ -21,7 +21,7 @@ const getData = async (input) => {
       `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&cnt=4&appid=241019ef2c8c83b71acba7e390ce2fac&units=metric`,
       { mode: "cors" }
     );
-    return (cityData = await response.json());
+    cityData = await response.json();
   };
 
   const getCityAQI = async () => {
@@ -29,7 +29,7 @@ const getData = async (input) => {
       `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=241019ef2c8c83b71acba7e390ce2fac`,
       { mode: "cors" }
     );
-    return (cityAQI = await response.json());
+    cityAQI = await response.json();
   };
 
   const getAllData = async () => {
@@ -40,7 +40,6 @@ const getData = async (input) => {
   await getCoord();
 
   await getAllData();
-  console.log(cityAQI);
 };
-console.log(cityAQI);
-export { getData };
+
+export { getData, cityAQI, cityData };

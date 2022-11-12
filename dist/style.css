@@ -145,7 +145,7 @@ body {
   --yellow: #ffb200;
 }
 
-#app-wrapper {
+.app-wrapper {
   max-width: 430px;
   display: flex;
   flex-direction: column;
@@ -166,22 +166,20 @@ body {
   font-size: 2rem;
   font-weight: bold;
 }
-#search-wrapper{
+#search-wrapper {
   display: flex;
+  justify-content: center;
   padding: 1rem;
-
 }
-#searchBtn{
+#searchBtn {
   background-color: transparent;
   box-shadow: 0;
   border: 0;
   cursor: pointer;
 }
 
-
 #input,
-#aqi
- {
+#aqi {
   background-color: var(--yellow);
   box-shadow: 0;
   border: 0;
@@ -192,14 +190,19 @@ body {
   color: white;
 }
 
-#temperature {
+#currentTemp {
   font-size: 10rem;
 }
 
-#temperature sup {
+#currentTemp sup {
   font-size: 3rem;
   position: relative;
   top: -0.5em;
+}
+
+#currentCondition-wrapper {
+  display: flex;
+  gap: 1rem;
 }
 
 #aqi {
@@ -208,9 +211,10 @@ body {
   font-weight: bold;
 }
 
-#description {
+#currentDesc {
   font-size: 2rem;
   font-weight: bold;
+  text-transform: capitalize;
 }
 #next-days {
   display: flex;
@@ -227,6 +231,10 @@ body {
 }
 myIcon {
   height: 2rem;
+}
+
+#next-hours p {
+  text-transform: capitalize;
 }
 .thunderstorm {
   content: url(../img/thunderstorm.svg);
@@ -248,6 +256,36 @@ myIcon {
 
 .search {
   content: url(../img/search.svg);
- 
 }
 
+.loading{
+  position: fixed;
+  
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#loading-text{
+  position: absolute;
+  font-size: 2rem;
+}
+
+.hidden{
+  display: none;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  
+  background-color: black;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+  
+}
