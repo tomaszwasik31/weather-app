@@ -237,25 +237,25 @@ myIcon {
   text-transform: capitalize;
 }
 .thunderstorm {
-  content: url(./img/thunderstorm.svg);
+  content: url(/dist/img/thunderstorm);
 }
 .clear {
-  content: url(./img/clear.svg);
+  content: url(/dist/img/clear.svg);
 }
 
 .clouds {
-  content: url(./img/clouds.svg);
+  content: url(/dist/img/clouds.svg);
 }
 .rain {
-  content: url(./img/rain.svg);
+  content: url(/dist/img/rain.svg);
 }
 
 .snow {
-  content: url(./img/snow.svg);
+  content: url(/dist/img/snow.svg);
 }
 
 .search {
-  content: url(./img/search.svg);
+  content: url(/dist/img/search.svg);
 }
 
 .loading {
