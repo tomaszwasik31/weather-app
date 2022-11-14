@@ -136,35 +136,24 @@ table {
 
 body {
   background-image: linear-gradient(#005c97, #363795);
-min-height: 100vh;
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   color: white;
   font-family: "Cabin", sans-serif;
-  
+
   cursor: default;
 }
 .app-wrapper {
-display: flex;
-flex-direction: column;
-gap: 2rem;
-padding: 3rem 6rem;
-}
-
-footer {
-  
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 3rem;
-  margin-top: -3rem;
-  background-color: black;
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  
+  gap: 2rem;
+
+  height: 100%;
 }
 
 #top-section,
