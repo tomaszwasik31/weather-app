@@ -130,28 +130,41 @@ table {
 
 @import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap");
 
-body {
-  background-image: linear-gradient(#005c97, #363795);
-  height: 100vh;
-  color: white;
-  font-family: "Cabin", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: default;
-}
-
 :root {
   --yellow: #ffb200;
 }
 
+body {
+  background-image: linear-gradient(#005c97, #363795);
+min-height: 100vh;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+  color: white;
+  font-family: "Cabin", sans-serif;
+  
+  cursor: default;
+}
 .app-wrapper {
-  max-width: 430px;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
+display: flex;
+flex-direction: column;
+gap: 2rem;
+padding: 3rem 6rem;
+}
 
-  gap: 2rem;
+footer {
+  
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 3rem;
+  margin-top: -3rem;
+  background-color: black;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  
 }
 
 #top-section,
@@ -275,16 +288,4 @@ myIcon {
 
 .hidden {
   display: none;
-}
-
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-
-  background-color: black;
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  min-height: 3rem;
 }
